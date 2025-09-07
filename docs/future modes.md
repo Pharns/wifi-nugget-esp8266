@@ -2,8 +2,8 @@
 
 ## 🔎 Passive Recon Modes
 
-- **✅ Wi-Fi Scanner (already done)** → Lists SSID, RSSI, channel, encryption.
-- **Channel Hopper / Continuous Scan** → Auto-scans every X seconds, logs results.
+- ✅ **Wi-Fi Scanner** → Lists SSID, RSSI, channel, encryption in-browser.
+- ✅ **Channel Hopper / Continuous Scan** → Auto-rescans every few seconds, updates results live.
 - **Hidden SSID Detector** → Sniffs for “null SSID” beacons and shows hidden APs.
 - **Signal Strength Meter** → Show RSSI in real time (like a Wi-Fi “Geiger counter”).
 
@@ -22,7 +22,7 @@
 
 ## 🗄️ Logging & Data Modes
 
-- **CSV Export Mode** → Serve scan results as downloadable CSV over the web panel.
+- ✅ **CSV Export Mode** → Serve scan results as downloadable CSV over the web panel.
 - **Log to SPIFFS** → Store scan results in ESP8266’s flash, review later.
 - **Syslog Mode** → Send scan events to a remote syslog server.
 - **MQTT Publish** → Send results to an MQTT broker (common in IoT).
@@ -31,10 +31,10 @@
 
 ## 🖥️ UX / Control Modes
 
-- **Stealth Mode** → AP hidden, accessible only by known client MAC.
-- **Auth Mode** → Simple login form in web panel (PIN/password).
+- ✅ **Stealth Mode** → Toggle AP SSID hidden/unhidden from the web panel.
+- ✅ **Auth Mode** → Basic Auth login (username/password) for control panel access.
 - **Schedule Mode** → Run scans/beacon floods at intervals, then go idle.
-- **Dual Interface Mode** → Connect ESP8266 to your home Wi-Fi as a client while still serving its AP panel.
+- ✅ **Dual Interface Mode** → Connect ESP8266 to your home Wi-Fi as a client while still serving its AP panel.
 
 ------
 
@@ -46,4 +46,3 @@
 - **Serial Bridge Mode** → Use the web panel to read/write serial data from another device.
 
 ------
-

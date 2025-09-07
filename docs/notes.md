@@ -44,9 +44,13 @@ Instead of physical buttons, I’m creating a **web-based control panel** to mak
 - Web panel available at `http://192.168.4.1`.
 - User can run a **Wi-Fi scan** and see results in the browser.
 
-### 🔜 Milestone 2: Add OLED Display
-- Display current mode (Idle / Scanning / Beacon / LoRa).
-- Mirror control panel actions.
+### ✅ Milestone 2: Dual Interface + Enhanced Web Panel
+- Add **Dual Interface Mode (AP + STA)** with toggle and STA config page.
+- Display both **AP IP** and **STA IP** in footer.
+- Add **Basic Auth login** for web panel.
+- Add **Continuous Scan mode** with auto-refresh.
+- Add **CSV export** of scan results.
+- Add **Stealth toggle** for AP SSID.
 
 ### 🔜 Milestone 3: LoRa Integration
 - Wire SX1276 module.
@@ -63,15 +67,18 @@ Instead of physical buttons, I’m creating a **web-based control panel** to mak
 - [x] Confirm AP appears with correct SSID/password.  
 - [x] Connect phone/laptop → open `http://192.168.4.1`.  
 - [x] Run Wi-Fi scan → see SSIDs, RSSI, channel, encryption.  
+- [x] Test CSV export + stealth toggle.  
+- [x] Enable STA → verify AP+STA dual interface works.  
 - [ ] Add OLED + verify I²C wiring.  
 - [ ] Integrate LoRa module + basic TX demo.  
 
 ---
 
 ## 📈 Notes & Observations
-- Serial monitor at **115200 baud** shows AP startup info and IP address.
+- Serial monitor at **115200 baud** shows AP/STA startup info and IP addresses.
 - Changing `AP_HIDDEN = true` hides SSID, but you can still connect manually.
 - ESP8266 scan results can include hidden SSIDs (shown as `<hidden>`).
+- STA reconnects automatically if credentials are valid.
 
 ---
 
@@ -84,4 +91,38 @@ Instead of physical buttons, I’m creating a **web-based control panel** to mak
 
 ## ⚠️ Ethics & Legal
 This project is for **educational purposes only** in a **controlled home lab**.  
-Do not use scanning or beacon/captive portal features on networks you do not own or have explicit permission to test.
+Do not use scanning, beaconing, or captive portal features on networks you do not own or have explicit permission to test.
+
+---
+
+## 🧩 Modes Overview
+
+### 🔎 Passive Recon Modes
+- ✅ **Wi-Fi Scanner** → Lists SSID, RSSI, channel, encryption in-browser.
+- ✅ **Channel Hopper / Continuous Scan** → Auto-rescans every few seconds.
+- **Hidden SSID Detector** → Planned.
+- **Signal Strength Meter** → Planned.
+
+### 📡 Active Lab Modes *(educational use only)*
+- **Beacon Frame Flood** → Planned.
+- **Captive Portal Demo** → Planned.
+- **Deauth Simulation** → Planned.
+- **Probe Response Spoof** → Planned.
+
+### 🗄️ Logging & Data Modes
+- ✅ **CSV Export Mode** → Scan results downloadable over web panel.
+- **Log to SPIFFS** → Planned.
+- **Syslog Mode** → Planned.
+- **MQTT Publish** → Planned.
+
+### 🖥️ UX / Control Modes
+- ✅ **Stealth Mode** → AP SSID toggle.
+- ✅ **Auth Mode** → Basic Auth login (username/password).
+- ✅ **Dual Interface Mode** → STA+AP simultaneous, toggle via web panel.
+- **Schedule Mode** → Planned.
+
+### 📶 Expansion Modes (hardware add-ons)
+- **LoRa TX/RX Mode** → Planned.
+- **OLED Display Mode** → Planned.
+- **Sensor Mode** → Planned.
+- **Serial Bridge Mode** → Planned.
