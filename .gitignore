@@ -1,0 +1,6 @@
+.DS_Store
+.vscode/
+*.elf
+*.bin
+*.map
+*.log
