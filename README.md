@@ -57,11 +57,20 @@ Do not use on networks you don’t own or have explicit permission to test.
 
 ---
 
-## 📈 Roadmap
-- [x] Milestone 1: Basic AP + Web Control + Wi-Fi Scan  
-- [ ] Milestone 2: Add OLED display for status/mode  
-- [ ] Milestone 3: Add LoRa SX1276 TX/RX integration  
-- [ ] Milestone 4: Safe beacon/captive portal demo for lab use  
+## Roadmap
+
+- [x] **Milestone 1** — AP + Web Control + Wi-Fi Scan  
+  ESP8266 boots as an AP, serves a control panel at `http://192.168.4.1`, and can scan nearby Wi-Fi networks.
+
+- [x] **Milestone 2** — Dual Interface Mode + Persistence  
+  Added AP / STA / AP+STA selector with safe fallback, persistent config via LittleFS, Basic Auth login, show/hide password toggles, CSV export, continuous scan, stealth toggle, reboot & factory reset endpoints, and improved UI.
+
+- [ ] **Milestone 3** — LoRa Integration  
+  Wire SX1276 module, add web panel buttons for LoRa TX/RX demo.
+
+- [ ] **Milestone 4** — Captive Portal / Beacon Demo *(lab use only)*  
+  Educational red-team demo of beacon frame spam and captive portals, with clear safe-use warnings.
+
 
 ---
 
