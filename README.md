@@ -75,10 +75,21 @@ Do not use on networks you don’t own or have explicit permission to test.
 
 ## Roadmap
 
-- [x] **Milestone 1** — AP + Web Control + Wi-Fi Scan  
-- [x] **Milestone 2** — Dual Interface Mode + Persistence  
-- [ ] **Milestone 3** — LoRa Integration  
-- [ ] **Milestone 4** — Captive Portal / Beacon Demo *(lab use only)*  
+- [x] **Milestone 1 — AP + Web Control + Wi-Fi Scan**  
+  ESP8266 boots as an AP, serves a control panel at `http://192.168.4.1`, and can scan nearby Wi-Fi networks.
+
+- [x] **Milestone 2 — Dual Interface + Persistence**  
+  AP / STA / AP+STA selector with safe fallback, persistent config (LittleFS), Basic Auth, show/hide password toggles, CSV export, continuous scan, stealth toggle, reboot & factory reset endpoints, explicit AP IP.
+
+- [x] **Milestone 3 — Bridge + Captive Portal + Deauth (Sim/Detect) + UI Polish**  
+  NAPT **Bridge mode** (internet to AP clients), **Captive Portal** (DNS redirect with allowlist), **Deauth Simulation** (lab-only logging), **Deauth Detection** (promiscuous sniff), live status **chips** with auto-refresh, refined **Tools** & **Network** pages, and password **show/hide** controls.
+
+- [ ] **Milestone 4 — LoRa Integration**  
+  Wire SX1276 module; add web controls for LoRa TX/RX demo and status.
+
+- [ ] **Milestone 5 — Beacon/Captive Portal Demo (Education)**  
+  Classroom-safe beacon/captive portal demonstration with clear warnings and toggles.
+
 
 ---
 
